@@ -2,7 +2,7 @@ package net.tylerwade.FinanceTracker.models;
 
 import jakarta.persistence.*;
 
-@Entity(name = "User")
+@Entity(name = "user")
 public class User {
 
     @Id
@@ -17,6 +17,9 @@ public class User {
     private String email;
     @Column(name = "password")
     private String password;
+
+    @Column(name = "balance")
+    private double balance;
 
     // Getters and Setters
 
@@ -58,5 +61,13 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public double getBalance() {
+        return balance;
+    }
+
+    public void setBalance(double balance) {
+        this.balance = balance;
     }
 }
